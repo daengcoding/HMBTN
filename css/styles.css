@@ -1,0 +1,200 @@
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 417px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar-menu {
+  width: 97%;
+  padding: 12px 20px;
+  margin: 4px;
+  display: inline-block;
+  border: 1px solid #00AFFC;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.sidebar button {
+  background-color: #00AFFC;
+  color: white;
+  padding: 14px 20px;
+  margin: 4px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.sidebar a, .sidebar button, .sidebar-menu {
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+  text-align: center;
+}
+ 
+.sidebar a.active, .sidebar button.active, .sidebar-menu.active {
+  background-color: #00AFFC;
+  color: white;
+}
+
+.sidebar a:hover:not(.active), .sidebar button:hover:not(.active), .sidebar-menu:hover:not(.active), option {
+  cursor: pointer;
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 417px;
+  padding: 1px 1px;
+  height: fit-content;
+}
+
+.field-outer-container {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.field-container {
+  box-sizing: border-box;
+  padding-top: 128px;
+  padding-left: 60px;
+  width: 1100px;
+  height: 796px;
+  background-image: url(../img/field.jpg);
+  background-size: cover;
+  margin: auto;
+}
+
+#btn-subs{
+	background-color: #c91a0a;
+}
+
+.field{
+	border-collapse: collapse;
+}
+
+.block {
+  background-size: cover;
+  box-sizing: border-box;
+  width: 21.5px;
+  height: 21.5px;
+  border: ridge 1px burlywood;
+  font-size: 7px;
+  text-align: center;
+  color: rgba(75, 45, 6, 0.425);
+}
+
+.block:hover {
+  cursor: pointer;
+  border: solid 1px green;
+}
+
+#range:disabled, #modes:disabled {
+  cursor: not-allowed;
+}
+
+#codes {
+	position: absolute;
+	left: -100000px;	
+}
+
+#access_nav {
+	display: none;
+}
+
+.half {
+	width: 47.5%;
+	display: flex;
+	float: left;
+}
+
+@media screen and (max-width: 1300px) {
+  .sidebar {
+    width: 300px;
+  }
+  
+  div.content {
+  	margin-left: 300px;
+  }
+  
+  .half {
+	width: 46.5%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: fixed;
+  	top: 0;
+  }
+  
+  div.content {
+  	margin-left: 0;
+  }
+  
+  .half {
+	width: 47.5%;
+  }
+  
+  #main_nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 0 8px 2px #000;
+  }
+
+  .with_nav #main_nav {
+    display: block;
+  }
+
+  .access_aid {
+    display: none;
+  }
+
+  #access_nav {
+    display: block;
+    position: fixed;
+    top: 1px;
+    right: 1px;
+    width: 40px;
+    height: 0;
+    padding-top: 40px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background: white 10px 10px / 20px 20px no-repeat;
+
+    background-image: -webkit-repeating-linear-gradient(#ccc, #ccc 2px, #fff 2px, #fff 4px);
+    background-image: repeating-linear-gradient(#ccc, #ccc 2px, #fff 2px, #fff 4px);
+    z-index: 1;
+  }
+
+  .with_nav #access_nav {
+    background-image: linear-gradient(45deg, transparent 13px, #ccc 13px, #ccc 15px, transparent 0), linear-gradient(-45deg, white 13px, #ccc 13px, #ccc 15px, white 0);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a, .sidebar-menu {
+    float: none;
+  }
+  
+  .half {
+	float: left;
+  }
+}
